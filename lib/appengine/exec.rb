@@ -722,7 +722,7 @@ module AppEngine
         delay = 0.0
         loop do
           sleep delay
-          uri = URI("http://#{host}/#{secret}")
+          uri = URI("https://#{host}/#{secret}")
           uri.query = ::URI.encode_www_form outpos: outpos, errpos: errpos
           response = http.request_get uri
           data = ::JSON.parse response.body
