@@ -716,7 +716,7 @@ module AppEngine
     end
 
     def track_status temp_version, secret
-      host = "#{temp_version}-dot-#{@service}-dot-#{@project}.an.r.appspot.com"
+      host = "#{temp_version}.#{@service}.#{@project}.appspot.com"
       ::Net::HTTP.start host do |http|
         outpos = errpos = 0
         delay = 0.0
